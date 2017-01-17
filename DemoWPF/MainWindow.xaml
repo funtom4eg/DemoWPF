@@ -38,14 +38,14 @@
         <Button Height="100" Width="100" />
     </WrapPanel>-->
     <StackPanel Orientation="Vertical" FlowDirection="LeftToRight">
-        <!--<Button Content="hello world" />
         <Button Content="hello world" />
         <Button Content="hello world" />
+        <Button Content="hello world" />
         <TextBlock Text="bad boy" />
         <TextBlock Text="bad boy" />
         <TextBlock Text="bad boy" />
-        <TextBlock Text="bad boy" />-->
-        <!--<Button ToolTip="Tooltip ept!">-->
+        <TextBlock Text="bad boy" />
+        <Button Content="aToolTip" ToolTip="Tooltip ept!" />
         <RadioButton>
             <RadioButton.ToolTip>
                 <Image Source="My Photo (2).jpg" Height="100" />
