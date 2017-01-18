@@ -19,6 +19,7 @@
         </Grid.RowDefinitions>
         <Button Content="Hello World!" Grid.Row="1"  Grid.Column="1"/>
     </Grid>-->
+
     <!--<WrapPanel>
         <Button Height="100" Width="100" />
         <Button Height="100" Width="100" />
@@ -37,15 +38,18 @@
         <Button Height="100" Width="100" />
         <Button Height="100" Width="100" />
     </WrapPanel>-->
-    <StackPanel Orientation="Vertical" FlowDirection="LeftToRight">
-        <!--<Button Content="hello world" />
+
+    <!--<StackPanel Orientation="Vertical" FlowDirection="LeftToRight">
+        -->
+    <!--<Button Content="hello world" />
         <Button Content="hello world" />
         <Button Content="hello world" />
         <TextBlock Text="bad boy" />
         <TextBlock Text="bad boy" />
         <TextBlock Text="bad boy" />
         <TextBlock Text="bad boy" />-->
-        <!--<Button ToolTip="Tooltip ept!">-->
+    <!--<Button ToolTip="Tooltip ept!">-->
+    <!--
         <RadioButton>
             <RadioButton.ToolTip>
                 <Image Source="My Photo (2).jpg" Height="100" />
@@ -91,5 +95,39 @@
                 <TextBlock Text="world" Grid.Row="2"/>
             </Grid>
         </RadioButton>
-    </StackPanel>
+    </StackPanel>-->
+    <Grid>
+        <ListBox x:Name="lbMain">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="100" />
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition />
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+                        <Image Source="My Photo (2).jpg" Grid.RowSpan="2"/>
+                        <TextBlock Text="{Binding FirstName}" Grid.Column="1" />
+                        <TextBlock Text="{Binding  LastName}" Grid.Column="1" Grid.Row="1" />
+                        <ListBox ItemsSource="{Binding Employees}" Grid.Column="2">
+                            <ListBox.ItemTemplate>
+                                <DataTemplate>
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock Text="{Binding FirstName }" />
+                                        <TextBlock Text=" " />
+                                        <TextBlock Text="{Binding LastName}" />
+                                    </StackPanel>
+
+                                </DataTemplate>
+                            </ListBox.ItemTemplate>
+                        </ListBox>
+                    </Grid>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+    </Grid>
 </Window>
